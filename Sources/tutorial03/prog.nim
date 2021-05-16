@@ -92,7 +92,7 @@ proc update {.cdecl.} =
   discard g4SwapBuffers()
 
 proc nim_start() {.exportc.} =
-  discard init("Shader", 1024, 768, nil, nil)
+  discard kincInit("Shader", 1024, 768, nil, nil)
   setUpdateCallback(update)
 
   load_shader("mvp.vert", vertex_shader.addr, stVertex)
