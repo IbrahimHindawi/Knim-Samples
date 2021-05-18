@@ -1,9 +1,9 @@
 #[
   build commands:
     dynamic:
-      nim -d:dynamic -d:direct3d11 Sources/build.nims Sources/tutorial04/prog.nim
+      nim -d:dynamic -d:direct3d11 Sources/build.nims Sources/tutorial04/prog_col.nim
     codegen:
-      nim -d:codegen -d:direct3d11 Sources/build.nims Sources/tutorial04/prog.nim
+      nim -d:codegen -d:direct3d11 Sources/build.nims Sources/tutorial04/prog_col.nim
 ]#
 
 import kinc/graphics4/graphics
@@ -200,7 +200,7 @@ proc nim_start() {.exportc.} =
   pipe.input_layout[1] = nil  
 
   pipe.depth_write = true
-  #pipe.depth_mode = KINC_G4_COMPARE_LESS
+  pipe.depth_mode = KINC_G4_COMPARE_LESS
   pipe.color_attachment_count = 1
 
   pipelineCompile(pipe.addr)
