@@ -200,7 +200,7 @@ proc nim_start() {.exportc.} =
   pipe.input_layout[1] = nil  
 
   pipe.depth_write = true
-  pipe.depth_mode = KINC_G4_COMPARE_LESS
+  #pipe.depth_mode = KINC_G4_COMPARE_LESS
   pipe.color_attachment_count = 1
 
   pipelineCompile(pipe.addr)
